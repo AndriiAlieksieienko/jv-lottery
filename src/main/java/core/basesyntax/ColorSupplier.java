@@ -3,23 +3,18 @@ package core.basesyntax;
 import java.util.Random;
 
 public class ColorSupplier {
+    private static final int NUMBER_AMOUNT = 101;
     private final Random random = new Random();
-    private final int numberAmount = 101;
 
     public Color getRandomColor() {
-        int randomIndex = random.nextInt(Color.values().length);
-        return Color.values()[randomIndex];
+        return Color.values()[random.nextInt(Color.values().length)];
     }
 
     public int getRandomNumber() {
-        return random.nextInt(numberAmount);
+        return random.nextInt(ColorSupplier.NUMBER_AMOUNT);
     }
 
     public Random getRandom() {
         return random;
-    }
-
-    public int getNumberAmount() {
-        return numberAmount;
     }
 }
